@@ -55,7 +55,6 @@ i{
     color: var(--primary);
     padding-left: 35px;
 }
-
 h2{
     text-align: center;
     color: var(--primary);
@@ -66,7 +65,8 @@ h2{
 /* CONTENIDO PRINCIPAL */
 #contendor{
     margin-left: 250px;
-    flex: 1;
+    /* flex: 1; */
+    height: 100vh;
     align-content: center;
     justify-content: center;
     padding: 20px;
@@ -84,10 +84,13 @@ h1{
     font-size: 2rem;
     color: var(--text-main);
 }
-
+#sub-cont{
+    flex: 1;
+    padding: 30px;
+}
 #card-emp{
     box-shadow: 0 0px 10px rgba(255,107,0,0.35);
-    height: 80%;
+    height: 100%;
     width: 100%;
     margin: 0 auto;
     padding: 20px;
@@ -95,7 +98,6 @@ h1{
     background-color: var(--bg-card);
     display: flex;
     flex-direction: row;
-    flex: 1;
 }
 #info{
     display: flex;
@@ -111,10 +113,10 @@ h1{
     padding-bottom: 40px;
     /* text-align: start; */
 }
-.admin-info h3{
+.admin-info h1{
     font-weight: bolder;
-    font-size: 2rem;
     margin-bottom: 15px;
+    font-size: 2rem;
 }
 .admin-stats{
     display: grid;
@@ -122,11 +124,13 @@ h1{
     align-items: center;
     padding-top: 30px;
 }
-span, p{
+span{
+    font-size: 1.2rem;
     font-weight: bold;
     color: var(--accent);
 }
 .admin-stats p{
+    font-weight: bold;
     color: var(--primary);
     font-size: 2rem;
 }

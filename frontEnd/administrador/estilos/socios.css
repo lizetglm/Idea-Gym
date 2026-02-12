@@ -1,0 +1,112 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+:root{
+    --bg-main: #0A0A0A;
+    --bg-card: #18181B;
+    --sidebar-bg: #141414;
+    --primary: #FF6B00;
+    --sombra: rgba(255,107,0,0.35);
+    --accent: #22C55E;
+    --highlight: #FACC15;
+    --text-main: #FAFAFA;
+    --text-secondary: #9CA3AF;
+}
+
+#contendor {
+    justify-content: flex-start;
+}
+
+#acciones button{
+    padding: 10px 20px;
+    border: none;
+    border-radius: 6px;
+    color: var(--text-main);
+    background-color:  var(--primary);
+    cursor: pointer;
+    margin-right: 10px;
+}
+
+#tabla-socios {
+    flex: 1;
+    margin-top: 20px;
+    background-color: var(--bg-card);
+    border: 1px solid #27272a;
+    border-radius: 10px;
+    overflow-y: auto;
+    box-shadow: 0 0px 10px var(--sombra);
+}
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: var(--bg-card);
+    color: var(--text-main);
+    border-radius: 10px;
+    padding: 10px;
+    overflow: scroll;
+    table-layout: fixed;
+}
+
+thead {
+    position: sticky;
+    top: 0;
+    background-color: #27272a;
+    /* z-index: 10; */
+}
+
+th {
+    padding: 16px;
+    text-align: left;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    color: var(--text-secondary);
+    border-bottom: 2px solid #3f3f46;
+}
+
+td {
+    padding: 14px 16px;
+    border-right: 1px solid var(--sidebar-bg);
+    font-size: 0.95rem;
+    vertical-align: middle;
+    /* Control de texto largo */
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+td div i{
+    margin: 0;
+}
+
+tr:hover {
+    background-color: rgba(255, 107, 0, 0.03);
+}
+
+/* Anchos de columnas específicos */
+th:nth-child(1), td:nth-child(1) { width: 60px; }  /* ID */
+th:nth-child(2), td:nth-child(2) { width: 25%; }   /* Nombre */
+th:nth-child(3), td:nth-child(3) { width: 20%; }   /* Apellido */
+th:nth-child(4), td:nth-child(4) { width: 25%; }   /* Correo */
+th:nth-child(5), td:nth-child(5) { width: 15%; }   /* Teléfono */
+th:nth-child(6), td:nth-child(6) { width: 100px; } /* Estado */
+th:nth-child(7), td:nth-child(7) { width: 14%; } /* Acciones */
+
+
+
+/* Botones personalizados */
+.btn-sm {
+    padding: 6px 12px;
+    font-size: 0.85rem;
+    border-radius: 6px;
+}
+
+/* Barra de scroll personalizada */
+#tabla-socios::-webkit-scrollbar {
+    width: 8px;
+}
+#tabla-socios::-webkit-scrollbar-thumb {
+    background: #3f3f46;
+    border-radius: 10px;
+}
