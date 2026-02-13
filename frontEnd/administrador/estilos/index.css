@@ -4,15 +4,39 @@
     box-sizing: border-box;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
-:root{
-    --bg-main: #0A0A0A;
-    --bg-card: #18181B;
-    --sidebar-bg: #141414;
-    --primary: #FF6B00;
-    --accent: #22C55E;
-    --highlight: #FACC15;
-    --text-main: #FAFAFA;
-    --text-secondary: #9CA3AF;
+
+/* ==================== Variables de Color ==================== */
+:root {
+    /* Colores Menta */
+    --mint-primary: #52D4A8;
+    --mint-secondary: #69E0C0;
+    --mint-dark: #3FBEA0;
+    --mint-light: #A8F3DD;
+    
+    /* Colores Grises Oscuros */
+    --gray-darker: #0D0D0D;
+    --gray-darkest: #1A1A1A;
+    --gray-dark: #2A2A2A;
+    --gray-medium: #404040;
+    --gray-light: #B0B0B0;
+    --gray-lighter: #D5DBDB;
+    --gray-lightest: #ECF0F1;
+    
+    /* Otros Colores */
+    --white: #FFFFFF;
+    --success: #52D4A8;
+    --warning: #F39C12;
+    --danger: #E74C3C;
+    --info: #3498DB;
+    
+    /* Sombras */
+    --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.3);
+    --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.4);
+    --shadow-lg: 0 10px 20px rgba(0, 0, 0, 0.5);
+    
+    /* Medidas */
+    --sidebar-width: 260px;
+    --border-radius: 8px;
 }
 
 body {
@@ -20,8 +44,8 @@ body {
     height: auto;
     display: flex;
     flex-direction: column;
-    background: var(--bg-main);
-    color: var(--text-main);
+    background: var(--gray-darker);
+    color: var(--white);
 }
 
 /* ICONOS */
@@ -34,9 +58,9 @@ i{
     position: fixed;
     left: 0;
     top: 0;  
-    width: 250px;
+    width: var(--sidebar-width);
     height: 100vh;
-    background: var(--sidebar-bg);
+    background: var(--gray-darkest);
     padding-top: 20px;
 }
 .sidebar ul {
@@ -46,56 +70,56 @@ i{
 .sidebar ul li a {
     display: block;
     padding: 15px 25px;
-    color: var(--text-secondary);
+    color: var(--gray-light);
     text-decoration: none;
     transition: 0.3s;
 }
 .sidebar ul li a:hover {
-    background: rgba(255,107,0,0.15);
-    color: var(--primary);
+    background: rgba(82, 212, 168, 0.15);
+    color: var(--mint-primary);
     padding-left: 35px;
 }
 
-h2{
+.sidebar h2{
     text-align: center;
-    color: var(--primary);
+    color: var(--mint-primary);
     margin-bottom: 30px;
     margin-top: 20px;
 }
 
 /* CONTENIDO PRINCIPAL */
 #contendor{
-    margin-left: 250px;
+    margin-left: var(--sidebar-width);
     flex: 1;
     align-content: center;
     justify-content: center;
     padding: 20px;
-    background: var(--bg-main);
+    background: var(--gray-darker);
     display: flex;
     flex-direction: column;
 }
 
 header {
     padding: 12px;
-    border-bottom: 2px solid rgba(255,107,0,0.4);
+    box-shadow: 0 2px 5px rgba(82, 212, 168, 0.3);
     margin-bottom: 20px;
 }
 h1{
     font-size: 2rem;
-    color: var(--text-main);
+    color: var(--white);
 }
 
 #card-emp{
-    box-shadow: 0 0px 10px rgba(255,107,0,0.35);
+    box-shadow: var(--shadow-md);
     height: 80%;
     width: 100%;
     margin: 0 auto;
     padding: 20px;
-    border-radius: 10px;
-    background-color: var(--bg-card);
+    border-radius: var(--border-radius);
+    background-color: var(--gray-darkest);
     display: flex;
     flex-direction: row;
-    flex: 1;
+    border: 1px solid var(--mint-primary);
 }
 #info{
     display: flex;
@@ -106,14 +130,13 @@ h1{
 }
 .admin-info{
     align-content: center;
-    border-bottom: 1px solid var(--accent);
+    border-bottom: 1px solid var(--mint-primary);
     margin-bottom: 10px;
     padding-bottom: 40px;
-    /* text-align: start; */
 }
-.admin-info h3{
+.admin-info h1{
     font-weight: bolder;
-    font-size: 2rem;
+    font-size: 2.5rem;
     margin-bottom: 15px;
 }
 .admin-stats{
@@ -124,14 +147,14 @@ h1{
 }
 span, p{
     font-weight: bold;
-    color: var(--accent);
+    color: var(--mint-primary);
 }
 .admin-stats p{
-    color: var(--primary);
-    font-size: 2rem;
+    color: var(--mint-secondary);
+    font-size: 2.5rem;
 }
 label{
-    color: var(--text-secondary);
+    color: var(--gray-light);
 }
 
 #foto{
@@ -143,8 +166,7 @@ label{
 img{
     max-width: 100%;
     height: auto;
-    /* object-fit: cover; */
-    border-radius: 10px;
-    box-shadow: 0 0 15px rgba(255,107,0,0.3);
+    border-radius: var(--border-radius);
+    box-shadow: 0 0 15px rgba(82, 212, 168, 0.3);
     display: block;
 }

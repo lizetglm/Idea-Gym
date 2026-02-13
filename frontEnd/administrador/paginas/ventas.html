@@ -16,7 +16,7 @@
             <li><a href=""><i class="fa-solid fa-users"></i> Socios</a></li>
             <li><a href=""><i class="fa-solid fa-chalkboard-user"></i> Entrenadores</a></li>
             <li><a href=""><i class="fa-solid fa-calendar-alt"></i> Clases</a></li>
-            <li><a href=""><i class="fa-solid fa-coins"></i> Caja</a></li>
+            <li><a href="caja.html"><i class="fa-solid fa-coins"></i> Caja</a></li>
             <li><a href="ventas.html"><i class="fa-solid fa-chart-line"></i> Ventas</a></li>
         </ul>
     </nav>
@@ -29,10 +29,63 @@
 
         <div id="contenedor-a">
             <div id="contenedor-productos">
-                
+                <h3>Productos Disponibles</h3>
+                <div id="productos">
+                    <div class="card-producto">
+                        <h4 class="nombre-producto">Proteína WheyGold</h4>
+                        <p class="precio">$450.00</p>
+                        <button class="btn-agregar">+ Agregar</button>
+                    </div>
+                    <div class="card-producto">
+                        <h4 class="nombre-producto">Creatina 300g</h4>
+                        <p class="precio">$280.00</p>
+                        <button class="btn-agregar">+ Agregar</button>
+                    </div>
+                    <div class="card-producto">
+                        <h4 class="nombre-producto">Shaker Premium</h4>
+                        <p class="precio">$120.00</p>
+                        <button class="btn-agregar">+ Agregar</button>
+                    </div>
+                    <div class="card-producto">
+                        <h4 class="nombre-producto">Toalla Deportiva</h4>
+                        <p class="precio">$80.00</p>
+                        <button class="btn-agregar">+ Agregar</button>
+                    </div>
+                    <div class="card-producto">
+                        <h4 class="nombre-producto">Guantes Gym</h4>
+                        <p class="precio">$150.00</p>
+                        <button class="btn-agregar">+ Agregar</button>
+                    </div>
+                    <div class="card-producto">
+                        <h4 class="nombre-producto">Botella de Agua</h4>
+                        <p class="precio">$65.00</p>
+                        <button class="btn-agregar">+ Agregar</button>
+                    </div>
+                </div>
             </div>
-            <div id="contenedor-ticket">
 
+            <div id="contenedor-ticket">
+                <h3>Ticket de Venta</h3>
+                <div id="lista-ticket">
+                    <p class="ticket-vacio">No hay productos agregados</p>
+                    <!-- Aquí se agregarán los productos dinámicamente -->
+                </div>
+                <div id="ticket-totales">
+                    <div class="ticket-fila">
+                        <span>Subtotal:</span>
+                        <span id="subtotal">$0.00</span>
+                    </div>
+                    <div class="ticket-fila">
+                        <span>IVA (16%):</span>
+                        <span id="iva">$0.00</span>
+                    </div>
+                    <hr class="ticket-separador">
+                    <div class="ticket-fila ticket-total">
+                        <span>Total:</span>
+                        <span id="total">$0.00</span>
+                    </div>
+                </div>
+                <button id="btn-realizar-venta">Realizar Venta</button>
             </div>
         </div>
     </div>

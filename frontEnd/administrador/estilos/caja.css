@@ -1,0 +1,256 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* ==================== Variables de Color ==================== */
+:root {
+    /* Colores Menta */
+    --mint-primary: #52D4A8;
+    --mint-secondary: #69E0C0;
+    --mint-dark: #3FBEA0;
+    --mint-light: #A8F3DD;
+    
+    /* Colores Grises Oscuros */
+    --gray-darker: #0D0D0D;
+    --gray-darkest: #1A1A1A;
+    --gray-dark: #2A2A2A;
+    --gray-medium: #404040;
+    --gray-light: #B0B0B0;
+    --gray-lighter: #D5DBDB;
+    --gray-lightest: #ECF0F1;
+    
+    /* Otros Colores */
+    --white: #FFFFFF;
+    --success: #52D4A8;
+    --warning: #F39C12;
+    --danger: #E74C3C;
+    --info: #3498DB;
+    
+    /* Sombras */
+    --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.3);
+    --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.4);
+    --shadow-lg: 0 10px 20px rgba(0, 0, 0, 0.5);
+    
+    /* Medidas */
+    --sidebar-width: 260px;
+    --border-radius: 8px;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background: var(--gray-darker);
+    color: var(--white);
+}
+
+/* ICONOS */
+i {
+    margin-right: 10px;
+}
+
+/* SIDEBAR */
+.sidebar {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: var(--sidebar-width);
+    height: 100vh;
+    background: var(--gray-darkest);
+    padding-top: 20px;
+}
+
+.sidebar h2 {
+    text-align: center;
+    color: var(--mint-primary);
+    margin-bottom: 30px;
+    margin-top: 20px;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 5px;
+}
+
+.sidebar ul li a {
+    display: block;
+    padding: 15px 25px;
+    color: var(--gray-light);
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.sidebar ul li a:hover {
+    background: rgba(82, 212, 168, 0.15);
+    color: var(--mint-primary);
+    padding-left: 35px;
+}
+
+/* CONTENIDO PRINCIPAL */
+#contendor {
+    margin-left: var(--sidebar-width);
+    flex: 1;
+    padding: 20px;
+    background: var(--gray-darker);
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* HEADER */
+header {
+    padding: 12px;
+    box-shadow: 0 2px 5px rgba(82, 212, 168, 0.3);
+    margin-bottom: 10px;
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+h1 {
+    font-size: 2rem;
+    color: var(--white);
+}
+
+#btn-nuevo-movimiento {
+    background: var(--mint-primary);
+    color: var(--gray-darker);
+    border: none;
+    padding: 12px 25px;
+    border-radius: var(--border-radius);
+    font-weight: 600;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+#btn-nuevo-movimiento:hover {
+    background: var(--mint-dark);
+    transform: scale(1.02);
+}
+
+#cards-resumen {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.card-resumen {
+    background: var(--gray-darkest);
+    border-radius: var(--border-radius);
+    padding: 25px;
+    border-left: 4px solid var(--mint-primary);
+}
+
+.card-ingresos {
+    border-left-color: var(--mint-primary);
+}
+
+.card-egresos {
+    border-left-color: var(--danger);
+}
+
+.card-total {
+    border-left-color: var(--mint-light);
+}
+
+.card-label {
+    font-size: 0.95rem;
+    color: var(--gray-light);
+    display: block;
+    margin-bottom: 10px;
+}
+
+.card-monto {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: var(--mint-primary);
+    margin: 0;
+}
+
+.card-monto.egreso {
+    color: var(--white);
+}
+
+.card-monto.total {
+    color: var(--mint-light);
+}
+
+#contenedor-movimientos {
+    background: var(--gray-darkest);
+    border-radius: var(--border-radius);
+    padding: 25px;
+    border: 1px dashed var(--gray-medium);
+    flex: 1;
+}
+
+#contenedor-movimientos h3 {
+    color: var(--white);
+    margin-bottom: 20px;
+    font-size: 1.2rem;
+}
+
+#tabla-movimientos {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+#tabla-movimientos thead th {
+    text-align: left;
+    padding: 15px 10px;
+    color: var(--gray-light);
+    font-weight: 600;
+    font-size: 0.85rem;
+    border-bottom: 1px solid var(--gray-medium);
+}
+
+#tabla-movimientos tbody tr {
+    transition: 0.3s;
+}
+
+#tabla-movimientos tbody tr:hover {
+    background: rgba(82, 212, 168, 0.05);
+}
+
+#tabla-movimientos tbody td {
+    padding: 18px 10px;
+    color: var(--white);
+    border-bottom: 1px solid var(--gray-dark);
+}
+
+.badge {
+    padding: 6px 15px;
+    border-radius: 20px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.badge-ingreso {
+    background: rgba(82, 212, 168, 0.2);
+    color: var(--mint-primary);
+    border: 1px solid var(--mint-primary);
+}
+
+.badge-egreso {
+    background: rgba(231, 76, 60, 0.2);
+    color: var(--danger);
+    border: 1px solid var(--danger);
+}
+
+/* MONTOS */
+.monto-positivo {
+    color: var(--mint-primary);
+    font-weight: 600;
+}
+
+.monto-negativo {
+    color: var(--danger);
+    font-weight: 600;
+}
