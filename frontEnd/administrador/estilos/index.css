@@ -79,8 +79,12 @@ i{
     color: var(--mint-primary);
     padding-left: 35px;
 }
+<<<<<<< HEAD
 
 .sidebar h2{
+=======
+h2{
+>>>>>>> 39e8881ba051a23b46040a34d27cc498810cb276
     text-align: center;
     color: var(--mint-primary);
     margin-bottom: 30px;
@@ -89,8 +93,14 @@ i{
 
 /* CONTENIDO PRINCIPAL */
 #contendor{
+<<<<<<< HEAD
     margin-left: var(--sidebar-width);
     flex: 1;
+=======
+    margin-left: 250px;
+    /* flex: 1; */
+    height: 100vh;
+>>>>>>> 39e8881ba051a23b46040a34d27cc498810cb276
     align-content: center;
     justify-content: center;
     padding: 20px;
@@ -108,10 +118,18 @@ h1{
     font-size: 2rem;
     color: var(--white);
 }
-
+#sub-cont{
+    flex: 1;
+    padding: 30px;
+}
 #card-emp{
+<<<<<<< HEAD
     box-shadow: var(--shadow-md);
     height: 80%;
+=======
+    box-shadow: 0 0px 10px rgba(255,107,0,0.35);
+    height: 100%;
+>>>>>>> 39e8881ba051a23b46040a34d27cc498810cb276
     width: 100%;
     margin: 0 auto;
     padding: 20px;
@@ -119,7 +137,10 @@ h1{
     background-color: var(--gray-darkest);
     display: flex;
     flex-direction: row;
+<<<<<<< HEAD
     border: 1px solid var(--mint-primary);
+=======
+>>>>>>> 39e8881ba051a23b46040a34d27cc498810cb276
 }
 #info{
     display: flex;
@@ -136,8 +157,12 @@ h1{
 }
 .admin-info h1{
     font-weight: bolder;
+<<<<<<< HEAD
     font-size: 2.5rem;
+=======
+>>>>>>> 39e8881ba051a23b46040a34d27cc498810cb276
     margin-bottom: 15px;
+    font-size: 2rem;
 }
 .admin-stats{
     display: grid;
@@ -145,13 +170,20 @@ h1{
     align-items: center;
     padding-top: 30px;
 }
-span, p{
+span{
+    font-size: 1.2rem;
     font-weight: bold;
     color: var(--mint-primary);
 }
 .admin-stats p{
+<<<<<<< HEAD
     color: var(--mint-secondary);
     font-size: 2.5rem;
+=======
+    font-weight: bold;
+    color: var(--primary);
+    font-size: 2rem;
+>>>>>>> 39e8881ba051a23b46040a34d27cc498810cb276
 }
 label{
     color: var(--gray-light);
